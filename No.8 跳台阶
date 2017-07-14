@@ -34,7 +34,8 @@ public:
 		if (number == 2)
 			return 2;
 		if (number > 2)
-			return jumpFloor(number - 1) + jumpFloor(number - 2);
+			return jumpFloor(number - 1) + jumpFloor(number - 2);//第一次跳一下，剩下的就有jumpFloor(number - 1)种跳法，
+			//第一次跳两下，剩下的就有jumpFloor(number - 2)种跳法
 	}
 };
 
