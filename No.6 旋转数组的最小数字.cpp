@@ -53,3 +53,36 @@ int   main()
 	return 0;
 
 }
+
+//class Solution {
+//public:
+//    int minNumberInRotateArray_inOrder(vector<int> rotateArray,int left,int right){
+//        int res=rotateArray[left];
+//        for(int i=left;i<right;i++){
+//            if(res<rotateArray[i])
+//                res=rotateArray[i];
+//        }
+//        return res;
+//    }
+//    
+//    int minNumberInRotateArray(vector<int> rotateArray) {
+//		int left=0;
+//        int right=rotateArray.size()-1;
+//        int mid=left;
+//        while(rotateArray[left]>=rotateArray[right]){
+//            if(right==left+1){
+//                mid=right;
+//                break;
+//            }
+//            mid=(left+right)/2;
+//            if(rotateArray[left]==rotateArray[right]&&rotateArray[mid]==rotateArray[left]){
+//                return minNumberInRotateArray_inOrder(rotateArray,left,right);
+//            }
+//            if(rotateArray[mid]>=rotateArray[left])
+//                left=mid;
+//            else if(rotateArray[mid]<=rotateArray[right])
+//                right=mid;
+//        }
+//        return rotateArray[mid];
+//    }
+//};
