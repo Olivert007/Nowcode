@@ -71,7 +71,7 @@ public:
 		//int pathLength = 0;
 		vector<vector<bool>> visited(rows, vector<bool>(cols, 0));
 		for (int row = 0; row < rows; row++) {
-			for (int col = 0; col < cols; col++) {
+			for (int col = 0; col < cols; col++) {//从每个节点开始找，所以visited数组对于每个点是独立的
 				if (hasPathCore(matrix, rows, cols, row, col, str, 0, visited)) {
 					return true;
 				}
