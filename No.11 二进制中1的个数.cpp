@@ -1,10 +1,10 @@
-//输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。(位运算)
-
+//输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。
 #include <iostream> 
 #include <vector> 
 #include <string>
 #include <queue>
 #include <stack>
+#include <cmath>
 using namespace std;
 
 
@@ -26,7 +26,6 @@ struct TreeNode {
 
 class Solution {
 public:
-	//把一个整数减去1，再和原整数做与运算，会把该整数最右边一个1变成0.那么一个整数的二进制有多少个1，就可以进行多少次这样的操作。
 	int  NumberOf1(int n) {
 		int count = 0;
 		while (n != 0) {
@@ -35,15 +34,28 @@ public:
 		}
 		return count;
 	}
+
+	int NumberOf1_general(int n) {
+		int count = 0;
+		unsigned int flag = 1;//00000001
+		while (flag) {
+			if (n&flag)
+				count++;
+			flag=flag << 1;
+		}
+		return count;
+	}
 };
 
-int main()
+int  main()
 {
+	int num;
 	Solution sol;
-	int output;
-	output = sol.NumberOf1(7);
-	cout << output << endl;
+	while (cin >> num) {
+		cout << "新解法： "<<sol.NumberOf1(num) <<" 普通解法： "<< sol.NumberOf1_general(num) << endl;
+	}
 
+	getchar();
 	getchar();
 	return 0;
 }
