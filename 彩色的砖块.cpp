@@ -1,3 +1,4 @@
+//https://www.nowcoder.com/question/next?pid=6291726&qid=112724&tid=9909496
 #include<iostream>
 #include<vector>
 #include<algorithm>
