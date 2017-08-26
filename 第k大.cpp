@@ -52,6 +52,12 @@ int main()
 		ary.push_back(a);
 	}
 	ary.push_back(a);
+	
+	//do {
+	//	cin >> a;
+	//	ary.push_back(a);
+	//} while (getchar() != '\n');
+	
 	//int n = ary.size();
 	int k;
 	cin >> k;
