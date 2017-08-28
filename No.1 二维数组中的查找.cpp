@@ -5,7 +5,7 @@
 #include   <vector> 
 using namespace std;
 
-class Solution {
+class Solution {//
 public:
 	bool Find(vector<vector<int> > array, int target) {
 		// begin from the top right coner
