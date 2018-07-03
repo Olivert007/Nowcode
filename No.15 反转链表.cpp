@@ -39,7 +39,7 @@ public:
 			Pre = pHead;//前一个节点取代当前节点
 			pHead = Next;//下一个节点取代当前节点
 		}
-		return pre;
+		return Pre;
 	}
 };
 
