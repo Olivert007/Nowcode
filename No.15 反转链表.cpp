@@ -31,13 +31,13 @@ public:
 	ListNode* ReverseList(ListNode* pHead) {
 		if (pHead == NULL)
 			return NULL;
-		ListNode *next;
-		ListNode *pre=NULL;//当前节点
+		ListNode *Next;
+		ListNode *Pre=NULL;//当前节点
 		while (pHead != NULL) {
-			next = pHead->next;//next记录当前节点的下一个节点
-			pHead->next = pre;//当前节点指向下一个节点
-			pre = pHead;//前一个节点取代当前节点
-			pHead = next;//下一个节点取代当前节点
+			Next = pHead->next;//next记录当前节点的下一个节点
+			pHead->next = Pre;//当前节点指向下一个节点
+			Pre = pHead;//前一个节点取代当前节点
+			pHead = Next;//下一个节点取代当前节点
 		}
 		return pre;
 	}
