@@ -29,7 +29,7 @@ public:
 	int  NumberOf1(int n) {
 		int count = 0;
 		while (n != 0) {
-			n = n&(n - 1);
+			n = n&(n - 1);//n&(n - 1)可以使二进制数最右边的1变为0，所以能将几个1变为0就有几个1，直到n为全0时退出循环
 			count++;
 		}
 		return count;
